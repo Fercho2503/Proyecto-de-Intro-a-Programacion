@@ -15,6 +15,9 @@ public class TiendaJuegos {
         //System.out.println("Hello World!");
         
         JOptionPane.showMessageDialog(null, "Bienvenido a la tienda de Videojuegos Apache");
+        JOptionPane.showInputDialog(null, "Que desea hacer el dia de hoy?\n1-Clientes\n2-Videojuegos\n"
+                + "3-Ventas\n4-Intercambios\n5-Salir del sistema");
+        
         
         
     }
