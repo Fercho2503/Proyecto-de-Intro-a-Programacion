@@ -3,6 +3,7 @@
  */
 
 package com.mycompany.tiendajuegos;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -11,6 +12,10 @@ package com.mycompany.tiendajuegos;
 public class TiendaJuegos {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        //System.out.println("Hello World!");
+        
+        JOptionPane.showMessageDialog(null, "Bienvenido a la tienda de Videojuegos Apache");
+        
+        
     }
 }
