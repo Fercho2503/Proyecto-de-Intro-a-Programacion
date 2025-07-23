@@ -22,6 +22,35 @@ public class Intercambios {
         this.juegoCliente = juegoCliente;
         this.comprobante = comprobante;
     }
+
+    public int getCedulaCliente() {
+        return cedulaCliente;
+    }
+
+    public void setCedulaCliente(int cedulaCliente) {
+        this.cedulaCliente = cedulaCliente;
+    }
+
+    public String getListaJuegos() {
+        return listaJuegos;
+    }
+
+    public void setListaJuegos(String listaJuegos) {
+        this.listaJuegos = listaJuegos;
+    }
+
+    public String getJuegoCliente() {
+        return juegoCliente;
+    }
+
+    public void setJuegoCliente(String juegoCliente) {
+        this.juegoCliente = juegoCliente;
+    }
+
+    public int getComprobante() {
+        return comprobante;
+    }
+    
     
     
 }
