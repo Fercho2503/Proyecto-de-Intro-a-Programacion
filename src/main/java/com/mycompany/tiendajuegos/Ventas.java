@@ -9,7 +9,7 @@ package com.mycompany.tiendajuegos;
  * @author fcfca
  */
 public class Ventas {
-    
+    a
     private String nombreCliente;
     private int idProducto;
     private double precio;
