@@ -14,26 +14,42 @@ public class TiendaJuegos {
 
     public static void main(String[] args) {
         //System.out.println("Hello World!");
-        a
+        
         ImageIcon marca = new ImageIcon("src/logo.jpg");
         
         JOptionPane.showMessageDialog(null, "BIENVENIDO A NUESTRA TIENDA DE VIDEOJUEGOS", "TIENDAS APACHE", 
                 JOptionPane.INFORMATION_MESSAGE, marca);
-        JOptionPane.showInputDialog(null, "****MENÚ****\n1-Clientes\n2-Productos\n3-Ventas\n4-Intercambios\n5-Salir del sistema");
-        
-        //Menu Clientes
-        JOptionPane.showInputDialog(null, "CLIENTES\n1- Registrar cliente\n2-Modificar clientes\n3-Eliminar Cliente\n\n4-Volver al menu principal");
-        
-        //Menu PRODUCTOS
-        JOptionPane.showInputDialog(null, "****PRODCUTOS****\n1-Registrar producto\n2-Consultar productos\n\n3-Volver al menu principal");
-        
-        
+        //Menu Principal
+        while (true){
+            String opcion= JOptionPane.showInputDialog(null, "****MENÚ****\n1-Clientes\n2-Productos\n3-Ventas\n4-Intercambios\n5-Salir del sistema");
+            
+            switch (opcion){
+                case "1":
+                    menuClientes();
+                    break;
+                case "2":
+                    menuProductos();
+                    break;
+                case "3":
+                    JOptionPane.showMessageDialog(null, "Bienvenido al menu de ventas");
+                    break;
+                case "4":
+                    JOptionPane.showMessageDialog(null, "Bienvenido al menu de intercambios");
+                    break;
+                case "5":
+                    System.exit(0);
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(null, "Esta opcion es incorrecta, por favor intente de nuevo!");
+            }
+        }
+        /*
         //Menu Ventas
         JOptionPane.showInputDialog(null, "****VENTAS****\n1-Realizar venta\n\n2-Volver al menu principal");
         
         //Menu Intercambios
         JOptionPane.showInputDialog(null, "****INTERCAMBIOS****\n1-Lista de juegos\n2-Registro juego cliente\n3-Generar comprobante intercambio\n\n4-Volver al menu principal");
-
+        */
 
         
         
@@ -42,4 +58,53 @@ public class TiendaJuegos {
         
         
     }
+    //Menu Clientes
+    static void menuClientes(){
+        while(true){
+            
+            String opcion = JOptionPane.showInputDialog(null, "CLIENTES\n1- Registrar cliente\n2-Modificar clientes\n3-Eliminar Cliente\n\n4-Volver al menu principal");
+            
+            if (opcion.equals("4")){
+                break;
+            }
+            switch (opcion){
+                case "1":
+                    JOptionPane.showMessageDialog(null, "Registrar Cliente");
+                    break;
+                case "2":
+                    JOptionPane.showMessageDialog(null, "Modificar Cliente");
+                    break;
+                case "3":
+                    JOptionPane.showMessageDialog(null, "Eliminar cliente");
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(null, "Esta opcion no es valida, por favor intente nuevamente");
+                    break;
+            }
+        }
+        
+    }
+    
+    //Menu de productos
+    static void menuProductos(){
+        while (true){
+            String opcion = JOptionPane.showInputDialog(null, "****PRODCUTOS****\n1-Registrar producto\n2-Consultar productos\n\n3-Volver al menu principal");
+            
+            if (opcion.equals("3")){
+                break;
+            }
+            switch (opcion){
+                case "1":
+                    JOptionPane.showMessageDialog(null, "Registrar producto");
+                    break;
+                case "2":
+                    JOptionPane.showMessageDialog(null, "Consultar productos");
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(null, "Esta opcion no es valida, por favor intente nuevamente");
+                    break;
+            }
+        }
+    }
+    
 }
