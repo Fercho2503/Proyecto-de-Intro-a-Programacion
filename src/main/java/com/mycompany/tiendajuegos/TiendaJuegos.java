@@ -14,7 +14,7 @@ public class TiendaJuegos {
 
     public static void main(String[] args) {
         //System.out.println("Hello World!");
-        
+        a
         ImageIcon marca = new ImageIcon("src/logo.jpg");
         
         JOptionPane.showMessageDialog(null, "BIENVENIDO A NUESTRA TIENDA DE VIDEOJUEGOS", "TIENDAS APACHE", 
