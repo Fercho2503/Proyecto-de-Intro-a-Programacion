@@ -31,10 +31,10 @@ public class TiendaJuegos {
                     menuProductos();
                     break;
                 case "3":
-                    JOptionPane.showMessageDialog(null, "Bienvenido al menu de ventas");
+                    menuVentas();
                     break;
                 case "4":
-                    JOptionPane.showMessageDialog(null, "Bienvenido al menu de intercambios");
+                    menuIntercambios();
                     break;
                 case "5":
                     System.exit(0);
@@ -43,20 +43,50 @@ public class TiendaJuegos {
                     JOptionPane.showMessageDialog(null, "Esta opcion es incorrecta, por favor intente de nuevo!");
             }
         }
-        /*
+    }    
         //Menu Ventas
-        JOptionPane.showInputDialog(null, "****VENTAS****\n1-Realizar venta\n\n2-Volver al menu principal");
+        static void menuVentas(){
+            while(true){
+            
+            String opcion = JOptionPane.showInputDialog(null, "****VENTAS****\n1-Realizar venta\n\n2-Volver al menu principal");
+            
+            if (opcion.equals("2")){
+                break;
+            }
+            switch (opcion){
+                case "1":
+                    JOptionPane.showMessageDialog(null, "Venta registrada en el sistema");
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(null, "Esta opcion no es valida, por favor intente nuevamente");
+                    break;
+            }
+        }
+    }
         
         //Menu Intercambios
-        JOptionPane.showInputDialog(null, "****INTERCAMBIOS****\n1-Lista de juegos\n2-Registro juego cliente\n3-Generar comprobante intercambio\n\n4-Volver al menu principal");
-        */
-
-        
-        
-        
-        
-        
-        
+        static void menuIntercambios(){
+            while(true){
+            
+            String opcion = JOptionPane.showInputDialog(null, "****INTERCAMBIOS****\n1-Lista de juegos\n2-Registro juego cliente\n3-Generar comprobante intercambio\n\n4-Volver al menu principal");
+            if (opcion.equals("4")){
+                break;
+            }
+            switch (opcion){
+                case "1":
+                    JOptionPane.showMessageDialog(null, "Los Juegos Disponibles para intercambio son:");
+                    break;
+                case "2":
+                    JOptionPane.showMessageDialog(null, "Registro completado");
+                    break;
+                case "3":
+                    JOptionPane.showMessageDialog(null, "Aqui tiene el comprobante generado:");
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(null, "Esta opcion no es valida, por favor intente nuevamente");
+                    break;
+            }
+        }
     }
     //Menu Clientes
     static void menuClientes(){
