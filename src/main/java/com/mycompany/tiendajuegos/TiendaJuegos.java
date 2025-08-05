@@ -90,6 +90,8 @@ public class TiendaJuegos {
     }
     //Menu Clientes
     static void menuClientes(){
+        GestionClientes gestionClientes = new GestionClientes();
+        gestionClientes.mostrarClientes();
         while(true){
             
             String opcion = JOptionPane.showInputDialog(null, "CLIENTES\n1- Registrar cliente\n2-Modificar clientes\n3-Eliminar Cliente\n\n4-Volver al menu principal");
@@ -99,13 +101,16 @@ public class TiendaJuegos {
             }
             switch (opcion){
                 case "1":
-                    JOptionPane.showMessageDialog(null, "Registrar Cliente");
+                    gestionClientes.registrarCliente();
+                    gestionClientes.mostrarClientes();
                     break;
                 case "2":
-                    JOptionPane.showMessageDialog(null, "Modificar Cliente");
+                    gestionClientes.modificarCliente();
+                    gestionClientes.mostrarClientes();
                     break;
                 case "3":
-                    JOptionPane.showMessageDialog(null, "Eliminar cliente");
+                    gestionClientes.eliminarCliente();
+                    gestionClientes.mostrarClientes();
                     break;
                 default:
                     JOptionPane.showMessageDialog(null, "Esta opcion no es valida, por favor intente nuevamente");
@@ -117,6 +122,8 @@ public class TiendaJuegos {
     
     //Menu de productos
     static void menuProductos(){
+        GestionJuegos juegos = new GestionJuegos();
+        
         while (true){
             String opcion = JOptionPane.showInputDialog(null, "****PRODCUTOS****\n1-Registrar producto\n2-Consultar productos\n\n3-Volver al menu principal");
             
@@ -125,10 +132,10 @@ public class TiendaJuegos {
             }
             switch (opcion){
                 case "1":
-                    JOptionPane.showMessageDialog(null, "Registrar producto");
+                    juegos.registrarProductos();
                     break;
                 case "2":
-                    JOptionPane.showMessageDialog(null, "Consultar productos");
+                    juegos.consultarProductos();
                     break;
                 default:
                     JOptionPane.showMessageDialog(null, "Esta opcion no es valida, por favor intente nuevamente");

@@ -15,6 +15,8 @@ public class Clientes {
     private String correo;
     private int telefono;
     
+    //Constructor de clientes
+    
     public Clientes(String nombre, int cedula, String correo, int telefono) {
         this.nombre = nombre;
         this.cedula = cedula;
@@ -23,6 +25,8 @@ public class Clientes {
         
     }
 
+    //Getters y setters de clientes 
+    
     public String getNombre() {
         return nombre;
     }
@@ -54,7 +58,6 @@ public class Clientes {
     public void setTelefono(int telefono) {
         this.telefono = telefono;
     }
-    
-    
-    
+   
+ 
 }
