@@ -31,19 +31,19 @@ public class GestionVentas {
         for (int i = 0; i < gestionJuegos.contador; i++) {
             listaJuegos += (i + 1) + ". " + gestionJuegos.juegos[i].getNombreJuego()
                     + " - ID: " + gestionJuegos.juegos[i].getIdJuego()
-                    + " - Precio: CRC " + gestionJuegos.juegos[i].getPrecioJuego() + "\n";
+                    + " - Precio: ₡" + gestionJuegos.juegos[i].getPrecioJuego() + "\n";
         }
         int numeroJuego = Integer.parseInt(JOptionPane.showInputDialog(listaJuegos + "\nSeleccione el número del juego:")) - 1;
 
         if (numeroJuego < 0 || numeroJuego >= gestionJuegos.contador) {
-            JOptionPane.showMessageDialog(null, "Juego inválido.");
+            JOptionPane.showMessageDialog(null, "Juego invalido");
             return;
         }
 
         double precio = gestionJuegos.juegos[numeroJuego].getPrecioJuego();
         int idProducto = gestionJuegos.juegos[numeroJuego].getIdJuego();
+        String nombreJuego = gestionJuegos.juegos[numeroJuego].getNombreJuego();
 
-        // Crear factura
         String factura = "= FACTURA DE JUEGO =\n"
                 + "Cliente: " + nombreCliente + "\n"
                 + "Juego Seleccionado: " + gestionJuegos.juegos[numeroJuego].getNombreJuego() + "\n"
@@ -59,6 +59,7 @@ public class GestionVentas {
         gestionJuegos.juegos[--gestionJuegos.contador] = null;
 
         JOptionPane.showMessageDialog(null, factura);
-        
+        JOptionPane.showMessageDialog(null, "El juego '" + nombreJuego + "' ha sido retirado del inventario.");
+
     }
 }
