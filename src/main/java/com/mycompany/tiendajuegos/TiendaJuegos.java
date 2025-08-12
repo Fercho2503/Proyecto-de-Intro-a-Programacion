@@ -68,29 +68,30 @@ public class TiendaJuegos {
     }
         
         //Menu Intercambios
-        static void menuIntercambios(){
-            while(true){
-            
-            String opcion = JOptionPane.showInputDialog(null, "****INTERCAMBIOS****\n1-Lista de juegos\n2-Registro juego cliente\n3-Generar comprobante intercambio\n\n4-Volver al menu principal");
-            if (opcion.equals("4")){
-                break;
-            }
-            switch (opcion){
-                case "1":
-                    JOptionPane.showMessageDialog(null, "Los Juegos Disponibles para intercambio son:");
+        static void menuIntercambios() {
+            GestionClientes gestionClientes = new GestionClientes();
+            GestionJuegos gestionJuegos = new GestionJuegos();
+            GestionIntercambios gestionIntercambios = new GestionIntercambios(gestionClientes, gestionJuegos);
+
+            while (true) {
+                String opcion = JOptionPane.showInputDialog(null, "*INTERCAMBIOS*\n1-Lista de juegos\n2-Realizar intercambio\n3-Volver al menú principal");
+
+                if (opcion.equals("3")) {
                     break;
-                case "2":
-                    JOptionPane.showMessageDialog(null, "Registro completado");
-                    break;
-                case "3":
-                    JOptionPane.showMessageDialog(null, "Aqui tiene el comprobante generado:");
-                    break;
-                default:
-                    JOptionPane.showMessageDialog(null, "Esta opcion no es valida, por favor intente nuevamente");
-                    break;
+                }
+                switch (opcion) {
+                    case "1":
+                        gestionIntercambios.mostrarListaJuegos();
+                        break;
+                    case "2":
+                        gestionIntercambios.registrarIntercambio();
+                        break;
+                    default:
+                        JOptionPane.showMessageDialog(null, "Opción no válida");
+                        break;
+                }
             }
         }
-    }
     //Menu Clientes
     static void menuClientes(){
         GestionClientes gestionClientes = new GestionClientes();

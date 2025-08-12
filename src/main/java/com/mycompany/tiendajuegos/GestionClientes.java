@@ -92,9 +92,9 @@ public class GestionClientes {
     public void mostrarClientes(){
         String clientesActuales = "Clientes actuales: \n";
         clientesActuales+="\n";
-        clientesActuales+="nombre \t       cedula \t                       correo \t                           telefono \n\n";
+        clientesActuales+="Nombre \t       Cedula \t                       Correo \t                           Telefono \n\n";
         for (int i=0; i<contador;i++){
-            clientesActuales+= clientes[i].getNombre()+ " \t " +clientes[i].getCedula()+" \t " +clientes[i].getCorreo()+" \t " +clientes[i].getTelefono()+"\n";
+            clientesActuales+= clientes[i].getNombre()+ "  \t  " +clientes[i].getCedula()+"  \t  " +clientes[i].getCorreo()+"  \t  " +clientes[i].getTelefono()+"\n";
             
             
         }

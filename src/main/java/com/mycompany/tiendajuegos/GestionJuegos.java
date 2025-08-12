@@ -48,7 +48,7 @@ public class GestionJuegos {
     public void consultarProductos(){
         String juegosActuales = "Juegos Actuales: \n\n";
         for (int i=0; i<contador;i++){
-            juegosActuales+="--Juego: "+juegos[i].getNombreJuego()+"-----Id: "+juegos[i].getIdJuego()+"-----Precio: CRC"+juegos[i].getPrecioJuego()+"-----Genero: "+juegos[i].getGenero()+"-----Plataforma: "+juegos[i].getPlataforma()+"-----Lanzamiento: "+juegos[i].getLanzamiento()+"--\n";
+            juegosActuales+= "-" + juegos[i].getNombreJuego()+" - ID: "+juegos[i].getIdJuego()+" - ₡"+juegos[i].getPrecioJuego()+"\n"+juegos[i].getGenero()+" - Plataforma: "+juegos[i].getPlataforma()+" - Lanzamiento: "+juegos[i].getLanzamiento()+"\n";
         }
         JOptionPane.showMessageDialog(null, juegosActuales);
     }
