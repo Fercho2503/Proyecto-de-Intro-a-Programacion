@@ -15,6 +15,8 @@ public class TiendaJuegos {
     public static void main(String[] args) {
         //System.out.println("Hello World!");
         
+        GestionJuegos gestionJuegos = new GestionJuegos();
+        
         ImageIcon marca = new ImageIcon("src/logo.jpg");
         
         JOptionPane.showMessageDialog(null, "BIENVENIDO A NUESTRA TIENDA DE VIDEOJUEGOS", "TIENDAS APACHE", 
@@ -31,7 +33,7 @@ public class TiendaJuegos {
                     menuProductos();
                     break;
                 case "3":
-                    menuVentas();
+                    menuVentas(gestionJuegos);
                     break;
                 case "4":
                     menuIntercambios();
@@ -45,7 +47,8 @@ public class TiendaJuegos {
         }
     }    
         //Menu Ventas
-        static void menuVentas(){
+        static void menuVentas(GestionJuegos gestionJuegos){
+            GestionVentas gestionVentas = new GestionVentas(gestionJuegos);
             while(true){
             
             String opcion = JOptionPane.showInputDialog(null, "****VENTAS****\n1-Realizar venta\n\n2-Volver al menu principal");
@@ -55,7 +58,7 @@ public class TiendaJuegos {
             }
             switch (opcion){
                 case "1":
-                    JOptionPane.showMessageDialog(null, "Venta registrada en el sistema");
+                    gestionVentas.realizarVenta();
                     break;
                 default:
                     JOptionPane.showMessageDialog(null, "Esta opcion no es valida, por favor intente nuevamente");
